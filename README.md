@@ -1,4 +1,5 @@
-drone-sites
+blog.done.io
 ===========
 
-drone's static websites (blog, docs, etc)
+Blog for [Drone.io](https://drone.io) continuous integration service
+
