@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Blog &middot; drone.io</title>
+		<title>{{ .page.title }} &middot; drone.io</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
 		<link rel="icon" type="image/png" href="img/favicon.png">
@@ -45,7 +45,11 @@
 					======================================================== -->
 					<div class="span3 pull-right">
 						<p><a href="https://drone.io">Drone.io</a> is a fully-managed Continuous Integration service. <a href="https://drone.io">Try it free today!</a></p>
-						<p style="border-top: 1px solid #EEE;margin-top: 20px;padding-top: 20px;"><a href="http://blog.drone.io/atom.xml">Subscribe to this Blog</a></p>
+						<p style="border-top: 1px solid #EEE;margin-top: 20px;padding-top: 20px;">
+							<a href="http://blog.drone.io/atom.xml" style="margin-bottom:10px;display:inline-block;">Subscribe to this Blog</a>
+							<a href="https://twitter.com/droneio" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @droneio</a>
+							<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+						</p>
 						<h3 style="margin-top:30px;padding-top: 10px;border-top: 1px solid #EEE;margin-top: 20px;">Recent Posts</h3>
 						<ul class="nav nav-pills nav-stacked nav-posts">
 							{{ range .site.posts }}
