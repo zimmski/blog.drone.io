@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>{{ .page.title }} &middot; drone.io</title>
+		<title>{{ .page.title | html }} &middot; drone.io</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
 		<link rel="icon" type="image/png" href="img/favicon.png">
@@ -35,7 +35,7 @@
 					<!-- Blog Post
 					======================================================== -->
 					<div class="span9">
-						<h1>{{ .page.title }}</h1>
+						<h1>{{ .page.title | html }}</h1>
 						<cite>Posted by <a href="{{ .page.authorlink }}" target="_blank">{{ .page.author }}</a> on {{ .page.date | date_to_string }}</cite>
 
 						{{ .content }}
@@ -53,7 +53,7 @@
 						<h3 style="margin-top:30px;padding-top: 10px;border-top: 1px solid #EEE;margin-top: 20px;">Recent Posts</h3>
 						<ul class="nav nav-pills nav-stacked nav-posts">
 							{{ range .site.posts }}
-							<li><a href="/{{ .url }}">{{ .title }} </a>{{ .author }} on {{ .date | date_to_string }}</li>
+							<li><a href="/{{ .url }}">{{ .title | html }} </a>{{ .author }} on {{ .date | date_to_string }}</li>
 							{{ end }}
 						</ul>
 
